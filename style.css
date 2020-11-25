@@ -1,0 +1,255 @@
+/* Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+input,
+button{
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+.menu{
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__section{
+    display: flex;
+    align-items: center;
+}
+
+.menu__section.left .menu__icon{
+    padding: 12px 16px;
+}
+
+.menu__link{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color: #757575;
+    padding: 12px 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu__link.active{
+    color: #4285f4;
+    border-bottom: 2px solid #4285f4;
+}
+
+.menu__link:not(.active){
+    margin-bottom: 2px;
+}
+
+.menu__link a{
+    text-decoration: none;
+}
+
+.menu__section.right{
+    margin-right: 4px;
+}
+.menu__section.right .menu__icon{
+    padding: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.meun__profile{
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+
+}
+.menu__avatar{
+    border-radius: 50%;
+}
+
+.menu__avatar--frame{
+    position: absolute;
+    cursor: pointer;
+}
+
+/* Main */
+
+.content{
+    display: flex;
+    flex: 11;
+    flex-direction: column;
+    padding: 56px 8px 0;
+    align-items: center;
+}
+
+.content__logo{
+    height: 56px;
+}
+
+.a-showRotate{
+    animation-name: showRotate;
+        -webkit-animation-name: showRotate;
+        -moz-animation-name: showRotate; 
+    animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        -moz-animation-duration: 2s;
+}
+
+.h-surprise:hover{
+    animation-name: surprise;
+    -webkit-animation-name: surprise;
+    -moz-animation-name: surprise;
+    animation-duration: .8s;
+    -webkit-animation-duration: .8s;
+    -moz-animation-duration: .8s;
+}
+
+
+.content__search{
+    margin-top: 18px;
+    width: 100%;
+    max-width: 736px;
+    position: relative;
+}
+.content__search--img{
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 12.5px;
+    left: -30;
+}
+
+
+
+
+.content__search--box{
+    width: 100%;
+    height: 50px;
+    /* CIMA - DIREITA - BAIXO - ESQUERDA */
+    padding: 7px 10px 6px 20px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8);
+    background: transparent;
+    border-radius: 25px;
+    border: 1px solid #dadce0;
+    outline: 0;
+    transition: 0.2s ease-in-out;
+}
+.content__search--box:hover{
+   -webkit-box-shadow:0 0 2px #66666691 ;
+   -moz-box-shadow:0 0 2px #66666691;
+   box-shadow:0 0 2px #66666691;
+}
+.content__search--box:focus{
+   -webkit-box-shadow:0 1px 2px #66666691 ;
+   -moz-box-shadow:0 1px 2px #66666691;
+   box-shadow:0 1px 2px #66666691;
+}
+
+
+.content__offer{
+    margin-top: 24px;
+    font-size: 13px;
+    padding: 6px 12px;
+}
+.content__offer a{
+    text-decoration: none;
+    color: #1967d2;
+}
+.content__offer a:hover{
+    text-decoration: #8558D9 underline;
+    color: #1967d2;
+}
+
+/* Footer */
+
+.footer{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f2;
+}
+
+.footer__section:not(:first-child){
+    border-top: 1px solid #e4e4e4;
+}
+
+.footer__location {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 10px 12px;
+}
+
+.footer__links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #5f6368;
+    padding: 10px;
+}
+
+.footer__links a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.footer__links a:not(:first-child){
+    margin-left: 27px;
+}
+
+.footer__links a:hover {
+    text-decoration: #8558D9 underline;
+}
+
+/* Media Query */
+
+@media (min-width: 763px) {
+    .content{
+        padding-top: 120px;
+    }
+
+    .content__logo{
+        height: 150px;
+    }
+    
+}
+
+/* !Keyframes */
+  @keyframes surprise
+    {
+        0% {transform: rotate(0deg) scale(1,1);;}
+        10% {transform: rotate(7deg) scale(2,2);}
+        20% {transform: rotate(-7deg) scale(2,2);}
+        30% {transform: rotate(7deg) scale(2,2);}
+        40% {transform: rotate(-7deg) scale(2,2);}
+        50% {transform: rotate(7deg) scale(2,2);}
+        60% {transform: rotate(-7deg) scale(2,2);}
+        70% {transform: rotate(7deg) scale(2,2);}
+        80% {transform: rotate(-7deg) scale(2,2);}
+        90% {transform: rotate(7deg) scale(2,2);}
+        100% {transform: rotate(0deg) scale(1,1);}
+    }
+
+    @keyframes showRotate
+    {
+        0% {opacity: 0; transform: scale(0.1) rotate(0deg);}
+        50% {transform: scale(1) rotate(360deg);}
+        100% {transform: scale(1) rotate(360deg); opacity: 1;}
+    }
+  

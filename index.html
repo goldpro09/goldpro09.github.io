@@ -1,0 +1,70 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Google Clone</title>
+
+        <link rel="shortcut icon" href="assets/google.svg" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="menu">
+            <div class="menu__section left">
+                <img src="assets/burger-icon.svg" alt="Burger" class="menu__icon">
+                <a class="menu__link active">All</a>
+                <a class="menu__link images" href="https://www.google.com.br/imghp?hl=pt-BR&tab=wi&authuser=0&ogbl">Images</a>
+            </div>
+
+            <div class="menu__section right">
+                <img src="assets/more-icon.svg" alt="More" class="menu__icon" onclick="goApps()">
+
+                <div class="menu__profile" onclick="goProfile()">
+                    <img src="assets/circle-frame.svg" alt="Avatar Frame" class="menu__avatar--frame">
+                    <img src="https://avatars.dicebear.com/api/male/a.svg?w=40&h=40" alt="Avatar Picture" class="menu__avatar">
+                </div>
+
+            </div>
+        </header>
+        
+
+        <main class="content">
+            <img src="assets/logo.svg" alt="UI CLONE" class="content__logo h-surprise a-showRotate" id="content__logo">
+
+            <div class="content__search">
+                <img src="assets/search.svg" alt="Search" class="content__search--img" onclick="searchGoogle()">
+                <input type="text" class="content__search--box" id="search" onsubmit="searchGoogle()">
+            </div>
+
+            <div class="content__offer">
+                Made with 💜 by <a href="https://youtube.com/rocketseat" target="_blank">GOLD 😎</a> for studing purpose!!
+            </div>
+        </main>
+        
+        
+        
+            <footer class="footer">
+            <div class="footer__section footer__location">
+                <span>Brazil</span>
+            </div>
+
+            <div class="footer__section">
+
+                <div class="footer__left footer__links"> 
+                    <a href="https://ads.google.com/intl/en_br/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                    <a href="https://smallbusiness.withgoogle.com/intl/pt-BR_br/help/#!/" target="_blank">Business</a>
+                    <a href="https://about.google/?utm_source=google-BR&utm_medium=referral&utm_campaign=hp-footer&fg=1" target="_blank">About</a>
+                    <a href="https://www.google.com/search/howsearchworks/?fg=1" target="_blank">How Search works</a>
+                </div>
+
+                <div class="footer__right footer__links">
+                    <a href="https://www.google.com/preferences?hl=pt-BR" target="_blank">Settings</a>
+                    <a href="https://policies.google.com/privacy?hl=pt-BR&fg=1" target="_blank">Privacy</a>
+                    <a href="https://policies.google.com/terms?hl=pt-BR&fg=1" target="_blank">Terms</a>
+                </div>
+                               
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
